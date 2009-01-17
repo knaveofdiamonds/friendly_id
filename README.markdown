@@ -6,14 +6,14 @@ can be transparently used as a uri parameter.
 
 Example
 -------
-<pre><code>
+<pre>
 class User < ActiveRecord::Base
   friendly_id :username
 end
 
 User.find("rolandswingler") # => a User, (assuming that User exists)
 User.find(1) # => still works as normal - you can still find by id
-</code></pre>
+</pre>
 
 The urls generated for `map.resources :user` would be: `/users/rolandswingler` 
 rather than `/users/1`
