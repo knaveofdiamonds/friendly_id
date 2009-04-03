@@ -40,7 +40,7 @@ module Knave
 
     module InstanceMethods # :nodoc:
       def to_param
-        CGI.escape(send(self.class.friendly_id_attribute).strip)
+        CGI.escape(send(self.class.friendly_id_attribute).strip).gsub(".", "%2e")
       end
     end
   end
